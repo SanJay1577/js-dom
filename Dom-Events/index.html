@@ -5,9 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Events</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="setTimeout(newFunction, 5000)" >call me</button>
+     <h1>Js Window and Dom Events</h1>
+     <button class="alert btn" onclick="alertFunction(`Hey Stop`)">Alert me</button>
+     <button class="prompt btn" onclick="promptFunction()">Prompt me</button>
+     <button class="confirm btn" onclick="confirmFunction()">Confirm me</button>
+     <div class="set-properties">
+       <button class="btn time-out" onclick="timeOutExample()">Set Timeout</button>
+       <button class="btn interval" onclick="intervalFunction()">Set Interval</button>
+     </div>
+     <div class="event-properties">
+        <input id="input-id"
+          type = "text"
+          placeholder="enter" 
+          onclick="clickEvent()" />
+
+        <select onchange="changeEvent()" >
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <button id = "btn-id" class="btn time-out">add an event</button>
+     </div>
     <script src="script.js"></script>
 </body>
 </html>
