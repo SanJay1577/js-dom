@@ -86,5 +86,134 @@ function changeEvent(){
 let addBtn = document.getElementById("btn-id")
 /////
 addBtn.addEventListener("click", ()=>{
-  console.log("you have created a function")
+
+  promptElement.textContent = "You have added a new event in this button"
 })
+
+//  different types of events 8 types
+//  4 essesntial
+//       window events 
+//    - scroll
+//    - resize 
+//       Form events 
+//    - focus 
+//    - blur
+//    - change
+//    -submit 
+//       KeyboardEvent 
+//   - key down
+//   keypress
+//   keyup 
+//        mouse events
+//    - click
+//    mousedwn
+//    mouse up 
+//    mousemove
+
+
+// window events
+
+window.addEventListener("scroll", ()=>{
+  count = count +1 
+  console.log("I'm scrolled", count)
+  
+})
+
+window.addEventListener("resize", (e)=>{
+  console.log(e)
+promptElement.textContent = `
+The width of the screen is ${e.target.innerWidth}
+The height of the screen is ${e.target.innerHeight}
+`
+})
+
+// Mouse events 
+
+// mouse down - >
+// at the moment of click
+// mouse up -> 
+// click release event 
+
+addBtn.addEventListener("mousedown", ()=>{
+  document.body.style.backgroundColor = "black"
+
+
+})
+addBtn.addEventListener("mouseup", ()=>{
+  promptElement.setAttribute("class" , "interval")
+})
+
+
+window.addEventListener("mousemove", (e)=>{
+  promptElement.textContent = `
+   The X axis Cordinates : ${e.clientX}
+   The Y axis Cordinates : ${e.clientY}
+   
+  `
+})
+
+window.addEventListener("mouseout", ()=>{
+  promptElement.textContent = ""
+})
+
+//key events
+
+// window.addEventListener("keydown", (e)=>{
+//   console.log(e.key);
+//   if (e.key != "s") {
+//     document.body.style.backgroundColor = "white"
+//   } else {
+//     document.body.style.backgroundColor = "black"
+//   }
+// })
+
+//forms events
+
+let inputArea = document.createElement("textarea"); 
+inputArea.setAttribute("id", "message-area")
+
+let validteString = document.createElement("div"); 
+validteString.setAttribute("id", "message-details"); 
+const maximumChatersAllowed = 300;
+
+
+// Reading the text area with events : 
+  inputArea.addEventListener("input", ()=>{
+    const allowedChachters = maximumChatersAllowed - inputArea.value.length
+    const styleColors = allowedChachters < 20 ? "red" : "green"
+      validteString.textContent = `The Remaining allowed chachters are : ${allowedChachters}`
+      validteString.style.color = styleColors;
+      if(allowedChachters === 0){
+        alert("hey stop")
+      }
+
+  })
+
+  // sumbit events 
+  let sampleForm = document.getElementById("form-id"); 
+
+  sampleForm.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    console.log("sumbited")
+  
+  })
+
+
+document.body.append(inputArea, validteString); 
+
+
+
+
+
+
+
+
+
+
+// task  - mini
+// resize - 600 -> bg => black
+// abobe 600 -> bg normal white
+// mousedown - bg - blue
+//mouse up - bg - red
+
+//TASK TWO 

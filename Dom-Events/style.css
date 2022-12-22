@@ -25,3 +25,16 @@
 .interval{
     background-color: coral;
 }
+#message-area{
+    width: 400px;
+    height: 300px;
+    margin-top: 15px;
+    background-color: burlywood;
+    text-align: left;
+    padding: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#message-details{
+    text-align: center;
+}
