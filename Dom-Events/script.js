@@ -73,7 +73,7 @@ function clickEvent(){
   console.log("You clicked this", clickCounter)
  const inputVarible = document.getElementById("input-id"); 
  console.log(inputVarible.value);
- inputVarible.value = "";
+
  
 }
 let changeCounter = 0
@@ -189,23 +189,25 @@ const maximumChatersAllowed = 300;
 
   })
 
+const formElement = document.createElement("div")
   // sumbit events 
   let sampleForm = document.getElementById("form-id"); 
 
   sampleForm.addEventListener("submit", (event)=>{
     event.preventDefault();
+    formElement.textContent = inputArea.value;
     console.log("sumbited")
+    promptElement.textContent = eval(inputArea.value) 
   
   })
 
 
-document.body.append(inputArea, validteString); 
+document.body.append(inputArea, validteString, formElement); 
 
 
+const value = eval(4*5); 
 
-
-
-
+console.log(value)
 
 
 
