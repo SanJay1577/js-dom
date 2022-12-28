@@ -116,6 +116,7 @@ fetch("https://restcountries.com/v3.1/all")
         region : element.region,
         capital : element.capital
      }
+
       createCountry(countryRequired)
      });
 
