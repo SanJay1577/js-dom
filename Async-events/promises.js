@@ -1,7 +1,8 @@
 
 let taskCompletion = 60;
 console.log("program started")
-//producer of promise
+
+// //producer of promise
 let promise = new Promise(
     (resolve, reject)=>{
         setTimeout(()=>{
@@ -23,7 +24,7 @@ let newPromise = new Promise((resolve, reject)=>{
 })
 
 
-// consumer of promise
+// // consumer of promise
 promise
 .then((returnValue)=>{
    console.log(returnValue);
@@ -44,7 +45,7 @@ newPromise
     console.log(val3);
 })
 
-//promise all (multiple promises)
+// //promise all (multiple promises)
 
 
 let promise1 = new Promise((resolve, reject)=>{
@@ -80,21 +81,54 @@ let promise3 = new Promise((resolve, reject)=>{
     console.log(`You have an error :`, err)
  }); 
 
-//callbacks and promises 
 
-function firstReturnFunction(outValue) {
-    console.log(`the out value is ${outValue}`)
+// converting normal function to a promise 
 
+function getName(name) {
+  return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+    if(name.length == 0) {
+        reject("Please pass a valid name")
+    }else{
+        resolve(name)
+    }
+}, 2000)
+  })
 }
 
-// function main(name) {
-//     console.log(`name : ${name}`)
-//   return name;
-// }
+function getAge(name){
+    console.log(`Hi ${name} please tell your age`)
+}
 
-// function firstReturnFunction(outValue) {
-//     console.log(`the out value is ${outValue}`)
-// }
+function verifyNameAndAge(name, age) {
+    setTimeout(()=>{
+    console.log(`Please verify your name is ${name} and age is ${age}`)
+}, 2000)
+}
+
+
+getName("sanjay")
+.then((val)=>{
+    return val;
+})
+.then((name)=>{
+    getAge(name); 
+    return name;
+})
+.then((name)=>{
+    verifyNameAndAge(name, 5); 
+    return name
+})
+.catch((err)=>{
+  console.log(err)
+})
+
+
+
+// .catch((error)=>{
+//     console.log(`The error is : ${error}`)
+// })
+
 
  
 // fetch ----------
