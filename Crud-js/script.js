@@ -10,7 +10,10 @@ function ReadAllData(){
     fetch(API, {
         method:"GET"
     })
-    .then((response)=> response.json())
+    .then((response)=> {
+        response.json()
+        // console.log(response);
+    })
     .then((data)=>console.log(data))
     .catch((err)=> console.log(err));
 }
@@ -32,7 +35,10 @@ function createData(){
         "Content-type" : "application/json; charset=UTF-8",
        },
     })
-    .then((response)=>response.json())
+    .then((response)=>{
+        response.json()
+        // console.log(response);
+    })
     .then((data)=> console.log(data))
     .catch((err)=>console.log(err));
 
@@ -54,7 +60,10 @@ function createData(){
             "Content-type" : "application/json; charset=UTF-8",
            },
     })
-    .then((response)=>response.json())
+    .then((response)=>{
+        response.json()
+        // console.log(response);
+    })
     .then((data)=>console.log(data))
     .catch((err)=>console.log(err))
 }
@@ -71,6 +80,7 @@ function deleteData(){
     })
     .then((response)=>{
         response.json();
+        // console.log(response)
     })
     .then((data)=>console.log(data))
     .catch((err)=>console.log(err));
