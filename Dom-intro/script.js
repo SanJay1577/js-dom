@@ -2,7 +2,7 @@
 // div span p h1, h6, mark0 --- elements;
 
 
-let newElement = document.createElement("div"); 
+let newElement = document.createElement("div"); /// first step
 newElement.style.backgroundColor = "yellow"
 newElement.style.color = "red"
 //inner text

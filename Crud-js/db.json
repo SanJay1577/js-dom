@@ -1,30 +1,45 @@
-[
+{
+  "posts": [
     {
-      "name": "name 1",
-      "class": "class 1",
-      "country": "country 1",
-      "image": "image 1",
-      "id": "1"
-    },
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "students": [
     {
       "name": "name 2",
       "class": "class 2",
       "country": "country 2",
-      "image": "image 2",
+      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
+      "like": 5,
       "id": "2"
     },
     {
       "name": "name 3",
       "class": "class 3",
       "country": "country 3",
-      "image": "image 3",
+      "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
+      "like": 8,
       "id": "3"
     },
     {
-      "name": "name 4",
-      "class": "class 4",
-      "country": "country 4",
-      "image": "image 4",
-      "id": "4"
+      "name": "jayavel",
+      "image": "https://www.pinkvilla.com/imageresize/Iron%20Main%20Robert%20Downey%20Jr%20main.jpg?width=752&t=pvorg",
+      "class": "b42",
+      "country": "india",
+      "like": 3,
+      "id": "RLLMTlH"
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

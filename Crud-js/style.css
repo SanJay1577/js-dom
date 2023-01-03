@@ -3,3 +3,68 @@
     padding: 0;
     margin: 0;
 }
+
+#student-list {
+    margin : 3rem;
+}
+
+.card {
+    justify-content: center;
+    border: 2px solid rgb(179, 175, 175);
+    padding : 10px;
+    width :20rem;
+    height:25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 0 10px 85px 0 rgba(0, 0, 0,0.2),
+                0 16px 40px 0 rgba(95, 70, 70, 0.2)
+}
+
+.stud-avatar{
+    justify-content: center;
+    height: 10rem;
+    width: auto;
+}
+
+button {
+    display: inline-block;
+    background-color:rgb(29, 73, 90);
+    border: none;
+    border-radius: 5px;
+    height:3rem;
+    width: max-content;
+    color: white;
+    font-size: 16px;
+    justify-content: center;
+}
+
+button:hover{
+    background-color: rgb(172, 68, 129);
+    color: white;
+    cursor: pointer;
+}
+
+.container{
+    padding:1rem;
+    width: stretch;
+    height: auto;
+
+    background-color:rgb(29, 73, 90);
+    opacity: 0.7;
+}
+
+.add-student-form{
+    width: 100%;
+}
+
+.input-text{
+    border-radius : 7px;
+    height: 3rem;
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+}
+.submit:hover {
+    cursor: pointer;
+}

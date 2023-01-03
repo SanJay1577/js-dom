@@ -10,10 +10,7 @@ function ReadAllData(){
     fetch(API, {
         method:"GET"
     })
-    .then((response)=> {
-        response.json()
-        // console.log(response);
-    })
+    .then((response)=> response.json())
     .then((data)=>console.log(data))
     .catch((err)=> console.log(err));
 }
@@ -190,3 +187,6 @@ async function deleteAsync(){
 //    - tweeet remove 
 
 // async as put 
+
+
+
