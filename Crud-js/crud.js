@@ -118,6 +118,7 @@ studentList.addEventListener("click", (event)=>{
      .then(()=>parent.remove())
      .catch((err)=>console.log(err))
   } 
+  console.log("finished")
 })
 
 
