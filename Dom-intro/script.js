@@ -47,6 +47,7 @@ var queryAllElement = document.querySelectorAll(".sample-class");
 
 console.log(queryAllElement);
 
+
 for (let i = 0; i<queryAllElement.length; i++){
     console.log(queryAllElement[i]);
     queryAllElement[i].style.color = "green"

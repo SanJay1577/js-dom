@@ -1,59 +1,37 @@
-console.log("new script is working");
 
-// first step is done......
-let ele = document.createElement("div");
-
-ele.textContent = "Hi I'm the new element";
-ele.style.color = "red";
-ele.setAttribute("id", "new-div");
-
-// second appending it
-document.body.append(ele);
-
-//accessing the element
-let head = document.getElementById("heading");
-
-head.setAttribute("class", "head-class");
-
-head.textContent = "i'm changed";
-
-function newFunction() {
-  console.log("new function");
+let user = {
+  name: "sanjay",
+  age: 25,
+  fullName:{
+    first :"sanjay",
+    last :"ravi",
+  }
 }
 
-newFunction();
+const name = "prashanth"
+const {name : myname} = user;
+const {fullName : {first}} = user
+console.log(myname);
 
-//foreach // read
 
-// map  // write
+Array.prototype.myMap = function (cb) {
+  let temp = [];
+  for(let i =0; i<this.length; i++) {
+    temp.push(cb(this[i], i, this))
+  }
+  return temp
+}
 
-const arr = [
-  { 
-    students:  [
-        {
-          firstname:"sanjay",
-          lastname :"guvi"
-        },
-        {
-          firstname : "arun",
-          lastname :"praveen"
-        }
-         ]
-   }, 
-   {
-   batch:"b42wd"
-   }
-];
+Array.prototype.myFilter = function (cb) {
+  let temp = [];
+  for(let i =0; i<this.length; i++) {
+    if(cb(this[i], i, this)){
+      temp.push(this[i])
+    }
+  }
+  return temp
+}
 
-const array = [5, 7, 8, 9];
+const arr = [1, 2, 3]
 
-array.map((item, id) => {
-  console.log(`The item is ${item}
-               The index is ${id}`);
-});
-
-console.log(arr[0].students[0].firstname);
-
-const filterdvalue = array.filter((item, id)=> id != 3); 
-console.log(filterdvalue);
-console.log(array);
+arr.myMap((value, index, arra)=>console.log(value, index, arra))
